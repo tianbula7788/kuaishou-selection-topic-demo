@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>快手选品瓷片区与商品专题交互 Demo</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="demo-nav">
+        <div class="brand">
+          <div class="brand-mark">快</div>
+          <div>
+            <strong>快手选品</strong>
+            <span>瓷片区与商品专题 Demo</span>
+          </div>
+        </div>
+        <button class="nav-item active" data-view="mini-home">小程序：首页瓷片区</button>
+        <button class="nav-item" data-view="mini-list">小程序：专题列表</button>
+        <button class="nav-item" data-view="mini-detail">小程序：专题详情</button>
+        <button class="nav-item" data-view="admin-tiles">后台：运营瓷片配置</button>
+        <button class="nav-item" data-view="admin-topics">后台：商品专题管理</button>
+        <button class="nav-item" data-view="admin-edit">后台：专题新增/编辑</button>
+        <div class="nav-note">
+          <b>演示开关</b>
+          <label><input id="loginSwitch" type="checkbox" /> 用户已登录</label>
+          <label><input id="emptySwitch" type="checkbox" /> 展示空状态</label>
+          <label><input id="errorSwitch" type="checkbox" /> 展示异常状态</label>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <h1 id="viewTitle">小程序：首页瓷片区</h1>
+            <p id="viewDesc">在现有快手选品首页金刚区下方增加 1 大 + 4 小运营瓷片区。</p>
+          </div>
+          <div class="top-actions">
+            <button class="ghost" id="resetBtn">重置演示数据</button>
+            <button class="primary" data-open="trackingPanel">查看埋点归因</button>
+          </div>
+        </header>
+
+        <section class="view active" id="mini-home">
+          <div class="phone">
+            <div class="ks-hero">
+              <div class="mini-status">抖老板 <span>抖音</span><b>快手</b></div>
+              <div class="search">输入商品名称/ID/链接/口令搜索</div>
+              <div class="hero-copy">去水印<br />全新升级</div>
+            </div>
+            <div class="kingkong">
+              <div>账号管理</div>
+              <div>爆单提醒</div>
+              <div>文案检测</div>
+              <div>爆品榜单</div>
+              <div>工具箱</div>
+            </div>
+            <div class="tile-zone" id="tileZone"></div>
+            <div class="tabs">
+              <button class="active">综合推荐</button>
+              <button>3日热销</button>
+              <button>低价好物</button>
+              <button>全部</button>
+            </div>
+            <div class="sort-row">
+              <span>最新发布</span><b>7日销量</b><span>佣金率</span><span>价格</span>
+            </div>
+            <div class="product-grid mini-products"></div>
+            <div class="tabbar"><b>首页</b><span>订单助手</span><span>达人榜单</span><span>个人中心</span></div>
+          </div>
+          <div class="inspector">
+            <h2>当前页说明</h2>
+            <ul>
+              <li>不新增金刚区专题入口。</li>
+              <li>瓷片区固定 1 大 + 4 小，大瓷片最多 3 条内容轮播。</li>
+              <li>点击瓷片先记录点击埋点，再按配置跳转。</li>
+              <li>从瓷片进入专题后，专题访问和商品行为携带来源瓷片内容 ID。</li>
+            </ul>
+            <div class="state-card">
+              <b>可试操作</b>
+              <p>点击任意瓷片，观察跳转、登录拦截和右侧埋点记录。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="mini-list">
+          <div class="phone topic-phone">
+            <div class="red-head">
+              <button class="back" data-view-target="mini-home">‹</button>
+              <b>商品专题</b>
+            </div>
+            <div class="topic-cover">
+              <h2>爆品热门专题</h2>
+              <p>优质好货 打包带走</p>
+            </div>
+            <div id="categoryBar" class="category-bar"></div>
+            <div id="topicList" class="topic-list"></div>
+          </div>
+          <div class="inspector">
+            <h2>专题列表交互</h2>
+            <ul>
+              <li>未登录用户可浏览列表。</li>
+              <li>分类是筛选项，默认不选中，单选后再次点击取消。</li>
+              <li>未配置分类时隐藏分类区。</li>
+              <li>点击专题卡片进入详情，未登录先触发登录。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="view" id="mini-detail">
+          <div class="phone topic-phone">
+            <div class="red-head detail-head">
+              <button class="back" data-view-target="mini-list">‹</button>
+              <b id="detailTitle">618消费券补贴</b>
+            </div>
+            <div class="detail-search">
+              <input id="miniSearch" placeholder="请输入要查询的内容" />
+              <button id="clearSearch">清空</button>
+            </div>
+            <div class="detail-cover">
+              <h2 id="detailCoverTitle">618消费券补贴</h2>
+              <p>官方百亿补贴</p>
+            </div>
+            <div class="detail-toolbar">
+              <div class="sort-scroll" id="miniSorts"></div>
+              <button id="batchShelf" class="batch-btn">批量加货架</button>
+            </div>
+            <div id="detailProducts" class="product-grid detail-products"></div>
+          </div>
+          <div class="inspector">
+            <h2>专题详情交互</h2>
+            <ul>
+              <li>详情页需要登录访问。</li>
+              <li>默认 7日销量排序；排序区横向滑动，批量按钮固定右侧。</li>
+              <li>商品卡片复用现有快手商品卡片组件，本 demo 只模拟动作。</li>
+              <li>复制 ID/口令是同一操作，由后端决定返回内容。</li>
+            </ul>
+            <div class="state-card">
+              <b>可试操作</b>
+              <p>搜索、排序、点击商品、单商品加货架、复制 ID/口令、批量加货架。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="admin-tiles">
+          <div class="admin-shell">
+            <aside class="admin-menu"><b>抖老板后台</b><span>快手选品管理</span><em>运营瓷片配置</em><span>商品专题管理</span></aside>
+            <div class="admin-page">
+              <div class="admin-title">
+                <div>
+                  <p>快手选品管理 / 运营瓷片配置</p>
+                  <h2>运营瓷片配置</h2>
+                  <span>配置首页金刚区下方、商品分类 Tab 上方的运营瓷片区。</span>
+                </div>
+                <button class="primary" id="saveTiles">保存配置</button>
+              </div>
+              <div class="notice">所有瓷片位均为必填；保存后持续展示，直到运营替换；本期仅支持商品专题、小程序路由，不支持 H5。</div>
+              <div class="admin-card">
+                <div class="card-head">
+                  <h3>瓷片位列表</h3>
+                  <span>固定 5 个瓷片位，不支持新增或删除</span>
+                </div>
+                <table class="data-table" id="tileTable"></table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="admin-topics">
+          <div class="admin-shell">
+            <aside class="admin-menu"><b>抖老板后台</b><span>运营瓷片配置</span><em>商品专题管理</em></aside>
+            <div class="admin-page">
+              <div class="admin-title">
+                <div>
+                  <p>快手选品管理 / 商品专题管理</p>
+                  <h2>商品专题管理</h2>
+                </div>
+                <div class="button-row">
+                  <button class="ghost" id="openCategoryDrawer">专题分类管理</button>
+                  <button class="primary" data-view-target="admin-edit">新增专题</button>
+                </div>
+              </div>
+              <div class="filters">
+                <input id="topicKeyword" placeholder="专题名称/ID" />
+                <select id="topicStatus"><option value="">全部状态</option><option>草稿</option><option>已上架</option><option>已下架</option></select>
+                <button class="primary" id="searchTopicBtn">查询</button>
+              </div>
+              <div class="admin-card">
+                <table class="data-table" id="topicTable"></table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="admin-edit">
+          <div class="admin-shell">
+            <aside class="admin-menu"><b>抖老板后台</b><span>商品专题管理</span><em>专题新增/编辑</em></aside>
+            <div class="admin-page">
+              <div class="admin-title">
+                <div>
+                  <p>快手选品管理 / 商品专题管理 / 新增专题</p>
+                  <h2>专题新增/编辑</h2>
+                </div>
+                <div class="button-row">
+                  <button class="ghost" data-view-target="admin-topics">取消</button>
+                  <button class="ghost" id="saveDraft">保存草稿</button>
+                  <button class="primary" id="publishTopic">保存并上架</button>
+                </div>
+              </div>
+              <div class="admin-card form-card">
+                <h3>基础信息</h3>
+                <div class="form-grid">
+                  <label>专题名称<input value="618消费券补贴" /></label>
+                  <label>专题副标题/描述<input value="官方百亿补贴" /></label>
+                  <label>专题分类<select><option>热门专题</option><option>低价好物</option><option>未分类</option></select></label>
+                  <label>排序<input value="10" /></label>
+                  <label class="upload">专题封面/头图<div>点击上传专题头图</div></label>
+                </div>
+              </div>
+              <div class="admin-card">
+                <div class="plan-section-title">
+                  <i></i>
+                  <h3>选择商品计划</h3>
+                </div>
+                <div class="plan-config-panel">
+                  <div class="plan-tabs">
+                    <button class="active" id="manualPlanTab">人工添加商品计划</button>
+                    <button id="autoPlanTab">自动匹配商品计划 <span>?</span></button>
+                  </div>
+                  <div class="plan-content" id="manualPlanContent">
+                    <div class="plan-subtitle"><i></i><b>选择活动计划</b></div>
+                    <button class="add-plan-btn" data-open="productSelectModal">＋ 添加商品计划</button>
+                    <div class="selected-plan-card">
+                      <b>618消费券补贴固定货盘</b>
+                      <span>已选择 6 个商品，来源：竞佣成功的快手选品池</span>
+                      <div class="button-row">
+                        <button class="ghost" data-open="productSelectModal">手动选择商品</button>
+                        <button class="ghost" data-open="excelModal">Excel 导入商品 ID</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="plan-content hidden" id="autoPlanContent">
+                    <div class="plan-subtitle">
+                      <i></i>
+                      <b>选择活动计划</b>
+                      <a>当前符合条件商品计划 170076 ›</a>
+                    </div>
+                    <div class="rule-card">
+                      <h4>计划规则1</h4>
+                      <div class="rule-row">
+                        <select><option>商品类目</option></select>
+                        <div class="multi-value">玩具乐器 × <span>+49...</span></div>
+                        <button>🗑</button>
+                      </div>
+                      <div class="rule-row">
+                        <select><option>佣金率</option></select>
+                        <input value="1" />
+                        <span>至</span>
+                        <input value="10" />
+                        <button>🗑</button>
+                      </div>
+                      <div class="rule-actions">
+                        <button data-open="conditionModal">＋ 添加条件</button>
+                        <button>重置</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <table class="data-table" id="cargoTable"></table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <div id="loginModal" class="modal-mask hidden">
+      <div class="modal small">
+        <h3>登录账号</h3>
+        <p>专题详情页需要登录后访问，登录成功后将回到目标专题详情页。</p>
+        <div class="modal-actions">
+          <button class="ghost" data-close>取消</button>
+          <button class="primary" id="confirmLogin">登录并继续</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tileEditModal" class="modal-mask hidden">
+      <div class="modal">
+        <h3 id="tileEditTitle">瓷片内容配置</h3>
+        <div class="form-grid modal-form">
+          <label>内容名称<input id="tileNameInput" /></label>
+          <label>跳转类型<select id="tileJumpType"><option>商品专题</option><option>小程序路由</option></select></label>
+          <label>跳转目标<input id="tileTargetInput" /></label>
+          <label>排序<input id="tileSortInput" value="1" /></label>
+          <label class="upload">封面图<div>根据瓷片尺寸上传</div></label>
+        </div>
+        <p class="muted">大瓷片支持 1-3 条内容并可排序；小瓷片固定 1 条；本期不支持 H5。</p>
+        <div class="modal-actions">
+          <button class="ghost" data-close>取消</button>
+          <button class="primary" id="saveTileEdit">保存</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mainTileResourceModal" class="modal-mask hidden">
+      <div class="modal extra-wide">
+        <div class="resource-modal-head">
+          <h3>主推资源位配置</h3>
+          <button data-close>×</button>
+        </div>
+        <div class="resource-actions">
+          <span>数据列表</span>
+          <button class="ghost" id="enableAllMainContents">全部启用</button>
+        </div>
+        <table class="data-table resource-table" id="mainTileResourceTable"></table>
+        <p class="muted">主推资源位最多支持 3 条内容，按排序顺序轮播；每行内容可单独编辑和查看点击明细。</p>
+      </div>
+    </div>
+
+    <div id="tileClickModal" class="modal-mask hidden">
+      <div class="modal wide">
+        <h3>瓷片点击明细</h3>
+        <div class="filters compact">
+          <input placeholder="时间范围" />
+          <input placeholder="用户 ID" />
+          <button class="primary">查询</button>
+        </div>
+        <table class="data-table" id="clickLogTable"></table>
+        <div class="modal-actions"><button class="primary" data-close>关闭</button></div>
+      </div>
+    </div>
+
+    <div id="categoryDrawer" class="drawer hidden">
+      <div class="drawer-panel">
+        <div class="drawer-head"><h3>专题分类管理</h3><button data-close>×</button></div>
+        <button class="primary" id="addCategory">新增</button>
+        <div id="categoryManageList" class="category-manage"></div>
+      </div>
+    </div>
+
+    <div id="productSelectModal" class="modal-mask hidden">
+      <div class="modal wide">
+        <h3>手动选择商品</h3>
+        <div class="filters compact"><input placeholder="商品 ID / 商品名称" /><button class="primary">查询</button></div>
+        <table class="data-table" id="selectProductTable"></table>
+        <div class="modal-actions"><button class="ghost" data-close>取消</button><button class="primary" id="addSelectedProducts">确定加入</button></div>
+      </div>
+    </div>
+
+    <div id="conditionModal" class="modal-mask hidden">
+      <div class="modal wide">
+        <h3>按条件选择商品</h3>
+        <div class="condition-grid">
+          <label>佣金率区间<input placeholder="10% - 40%" /></label>
+          <label>价格区间<input placeholder="9.9 - 99" /></label>
+          <label>7日销量区间<input placeholder="1000 - 50000" /></label>
+          <label>商品类目<select multiple><option>食品</option><option>个护</option><option>服饰</option></select></label>
+          <label>快手官方商品标签<select multiple><option>平台补贴</option><option>已获得流量扶持</option><option>直播返佣</option><option>直播同款</option><option>政策补贴</option></select></label>
+        </div>
+        <div class="modal-actions"><button class="ghost" data-close>取消</button><button class="primary" id="conditionAdd">查询并加入</button></div>
+      </div>
+    </div>
+
+    <div id="excelModal" class="modal-mask hidden">
+      <div class="modal">
+        <h3>Excel 导入商品 ID</h3>
+        <div class="upload-box">上传包含商品 ID 列的 Excel</div>
+        <div class="result-box">
+          <b>解析结果</b>
+          <p>成功 3 条，失败 2 条。重复 ID 自动去重，失败商品展示原因。</p>
+          <ul><li>KS10021：未匹配到竞佣成功商品</li><li>KS10022：商品已失效</li></ul>
+        </div>
+        <div class="modal-actions"><button class="ghost" data-close>取消</button><button class="primary" id="excelImport">确定导入</button></div>
+      </div>
+    </div>
+
+    <div id="trackingPanel" class="drawer hidden">
+      <div class="drawer-panel tracking">
+        <div class="drawer-head"><h3>埋点与归因记录</h3><button data-close>×</button></div>
+        <div id="trackingList"></div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

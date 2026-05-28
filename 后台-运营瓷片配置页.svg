@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect x="0" y="0" width="1440" height="900" rx="0" ry="0" fill="#f5f7fa" stroke="none" stroke-width="0"></rect>
+<rect x="0" y="0" width="216" height="900" rx="0" ry="0" fill="#101828" stroke="#101828" stroke-width="1"></rect>
+<text x="28" y="48" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="22" fill="#fff" font-weight="800" text-anchor="start">抖老板后台</text>
+<rect x="16" y="96" width="184" height="40" rx="6" ry="6" fill="#101828" stroke="#101828" stroke-width="1"></rect>
+<text x="40" y="122" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#cbd5e1" font-weight="400" text-anchor="start">首页</text>
+<rect x="16" y="148" width="184" height="40" rx="6" ry="6" fill="#1d2939" stroke="#344054" stroke-width="1"></rect>
+<text x="40" y="174" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#fff" font-weight="700" text-anchor="start">快手选品管理</text>
+<rect x="16" y="200" width="184" height="40" rx="6" ry="6" fill="#101828" stroke="#101828" stroke-width="1"></rect>
+<text x="40" y="226" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#cbd5e1" font-weight="400" text-anchor="start">商品管理</text>
+<rect x="16" y="252" width="184" height="40" rx="6" ry="6" fill="#101828" stroke="#101828" stroke-width="1"></rect>
+<text x="40" y="278" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#cbd5e1" font-weight="400" text-anchor="start">订单管理</text>
+<rect x="16" y="304" width="184" height="40" rx="6" ry="6" fill="#101828" stroke="#101828" stroke-width="1"></rect>
+<text x="40" y="330" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#cbd5e1" font-weight="400" text-anchor="start">数据中心</text>
+<rect x="16" y="356" width="184" height="40" rx="6" ry="6" fill="#101828" stroke="#101828" stroke-width="1"></rect>
+<text x="40" y="382" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#cbd5e1" font-weight="400" text-anchor="start">系统设置</text>
+<text x="58" y="158" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#93c5fd" font-weight="700" text-anchor="start">运营瓷片配置</text>
+<rect x="216" y="0" width="1224" height="64" rx="0" ry="0" fill="#fff" stroke="#e5e7eb" stroke-width="1"></rect>
+<text x="248" y="40" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#667085" font-weight="400" text-anchor="start">快手选品管理 / 运营瓷片配置</text>
+<text x="1320" y="40" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="600" text-anchor="start">甜不辣</text>
+<text x="248" y="112" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="28" fill="#101828" font-weight="800" text-anchor="start">运营瓷片配置</text>
+<text x="248" y="142" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#667085" font-weight="400" text-anchor="start">配置快手选品首页金刚区下方、商品分类 Tab 上方的 1 大 + 4 小运营瓷片区。</text>
+<rect x="248" y="166" width="1062" height="72" rx="8" ry="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"></rect>
+<text x="272" y="195" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#1d4ed8" font-weight="800" text-anchor="start">配置说明</text>
+<text x="272" y="220" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#1d4ed8" font-weight="400" text-anchor="start">所有瓷片位均为必填；保存后持续展示，直到运营替换；本期仅支持跳转商品专题、小程序路由，不支持 H5。</text>
+<rect x="1198" y="184" width="88" height="36" rx="4" ry="4" fill="#165dff" stroke="#165dff" stroke-width="1"></rect>
+<text x="1242" y="207" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#fff" font-weight="600" text-anchor="middle">保存配置</text>
+<rect x="248" y="266" width="1062" height="514" rx="8" ry="8" fill="#fff" stroke="#e5e7eb" stroke-width="1"></rect>
+<text x="272" y="302" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#101828" font-weight="800" text-anchor="start">瓷片位列表</text>
+<text x="374" y="302" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#98a2b3" font-weight="400" text-anchor="start">固定 5 个瓷片位，不支持新增或删除</text>
+<rect x="1154" y="282" width="62" height="32" rx="4" ry="4" fill="#fff" stroke="#d0d5dd" stroke-width="1"></rect>
+<text x="1185" y="303" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="600" text-anchor="middle">刷新</text>
+<rect x="1226" y="282" width="62" height="32" rx="4" ry="4" fill="#fff" stroke="#d0d5dd" stroke-width="1"></rect>
+<text x="1257" y="303" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="600" text-anchor="middle">预览</text>
+<rect x="248" y="326" width="1062" height="46" rx="0" ry="0" fill="#f2f4f7" stroke="none" stroke-width="1"></rect>
+<text x="262" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">瓷片位</text>
+<text x="400" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">封面图</text>
+<text x="516" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">内容数量</text>
+<text x="624" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">跳转类型</text>
+<text x="752" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">内容信息</text>
+<text x="928" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">最近更新人</text>
+<text x="1070" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">最近更新时间</text>
+<text x="1242" y="355" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#475467" font-weight="700" text-anchor="start">操作</text>
+<line x1="248" y1="372" x2="1310" y2="372" stroke="#e5e7eb" stroke-width="1"></line>
+<rect x="248" y="372" width="1062" height="72" rx="0" ry="0" fill="#fff" stroke="none" stroke-width="1"></rect>
+<line x1="248" y1="444" x2="1310" y2="444" stroke="#e5e7eb" stroke-width="1"></line>
+<text x="262" y="414" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="600" text-anchor="start">主推资源位</text>
+<rect x="400" y="386" width="62" height="44" rx="6" ry="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"></rect>
+<text x="431" y="414" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#c2410c" font-weight="600" text-anchor="middle">大瓷片</text>
+<text x="516" y="414" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">3 条</text>
+<text x="624" y="414" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">商品专题</text>
+<text x="752" y="402" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#344054" font-weight="500" text-anchor="start">618大促主推</text>
+<text x="752" y="424" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#98a2b3" font-weight="400" text-anchor="start">按排序轮播 1/2/3</text>
+<text x="928" y="414" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">运营A</text>
+<text x="1070" y="414" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">2026-05-28 12:30</text>
+<text x="1242" y="402" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">编辑</text>
+<text x="1286" y="402" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">点击明细</text>
+<rect x="248" y="444" width="1062" height="72" rx="0" ry="0" fill="#fff" stroke="none" stroke-width="1"></rect>
+<line x1="248" y1="516" x2="1310" y2="516" stroke="#e5e7eb" stroke-width="1"></line>
+<text x="262" y="486" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="600" text-anchor="start">次级资源位 1</text>
+<rect x="400" y="458" width="62" height="44" rx="6" ry="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"></rect>
+<text x="431" y="486" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#c2410c" font-weight="600" text-anchor="middle">小瓷片</text>
+<text x="516" y="486" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">1 条</text>
+<text x="624" y="486" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">商品专题</text>
+<text x="752" y="474" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#344054" font-weight="500" text-anchor="start">低价好物</text>
+<text x="752" y="496" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#98a2b3" font-weight="400" text-anchor="start">固定展示</text>
+<text x="928" y="486" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">运营B</text>
+<text x="1070" y="486" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">2026-05-28 11:20</text>
+<text x="1242" y="474" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">编辑</text>
+<text x="1286" y="474" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">点击明细</text>
+<rect x="248" y="516" width="1062" height="72" rx="0" ry="0" fill="#fff" stroke="none" stroke-width="1"></rect>
+<line x1="248" y1="588" x2="1310" y2="588" stroke="#e5e7eb" stroke-width="1"></line>
+<text x="262" y="558" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="600" text-anchor="start">次级资源位 2</text>
+<rect x="400" y="530" width="62" height="44" rx="6" ry="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"></rect>
+<text x="431" y="558" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#c2410c" font-weight="600" text-anchor="middle">小瓷片</text>
+<text x="516" y="558" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">1 条</text>
+<text x="624" y="558" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">小程序路由</text>
+<text x="752" y="546" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#344054" font-weight="500" text-anchor="start">爆品榜单入口</text>
+<text x="752" y="568" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#98a2b3" font-weight="400" text-anchor="start">/pages/rank/index</text>
+<text x="928" y="558" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">运营B</text>
+<text x="1070" y="558" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">2026-05-27 19:40</text>
+<text x="1242" y="546" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">编辑</text>
+<text x="1286" y="546" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">点击明细</text>
+<rect x="248" y="588" width="1062" height="72" rx="0" ry="0" fill="#fff" stroke="none" stroke-width="1"></rect>
+<line x1="248" y1="660" x2="1310" y2="660" stroke="#e5e7eb" stroke-width="1"></line>
+<text x="262" y="630" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="600" text-anchor="start">次级资源位 3</text>
+<rect x="400" y="602" width="62" height="44" rx="6" ry="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"></rect>
+<text x="431" y="630" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#c2410c" font-weight="600" text-anchor="middle">小瓷片</text>
+<text x="516" y="630" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">1 条</text>
+<text x="624" y="630" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">商品专题</text>
+<text x="752" y="618" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#344054" font-weight="500" text-anchor="start">端午粽情</text>
+<text x="752" y="640" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#98a2b3" font-weight="400" text-anchor="start">固定展示</text>
+<text x="928" y="630" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">运营C</text>
+<text x="1070" y="630" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#344054" font-weight="400" text-anchor="start">2026-05-27 18:12</text>
+<text x="1242" y="618" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">编辑</text>
+<text x="1286" y="618" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">点击明细</text>
+<rect x="248" y="660" width="1062" height="72" rx="0" ry="0" fill="#fafafa" stroke="none" stroke-width="1"></rect>
+<line x1="248" y1="732" x2="1310" y2="732" stroke="#e5e7eb" stroke-width="1"></line>
+<text x="262" y="702" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#98a2b3" font-weight="600" text-anchor="start">次级资源位 4</text>
+<rect x="400" y="674" width="62" height="44" rx="6" ry="6" fill="#f2f4f7" stroke="#d0d5dd" stroke-width="1"></rect>
+<text x="431" y="702" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#98a2b3" font-weight="600" text-anchor="middle">待配置</text>
+<text x="516" y="702" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#98a2b3" font-weight="400" text-anchor="start">0 条</text>
+<text x="624" y="702" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#98a2b3" font-weight="400" text-anchor="start">待配置</text>
+<text x="752" y="690" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#98a2b3" font-weight="500" text-anchor="start">待配置</text>
+<text x="752" y="712" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" fill="#98a2b3" font-weight="400" text-anchor="start">保存前必须补齐</text>
+<text x="928" y="702" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#98a2b3" font-weight="400" text-anchor="start">-</text>
+<text x="1070" y="702" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#98a2b3" font-weight="400" text-anchor="start">-</text>
+<text x="1242" y="690" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">编辑</text>
+<text x="1286" y="690" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#165dff" font-weight="600" text-anchor="start">点击明细</text>
+<rect x="248" y="804" width="520" height="56" rx="8" ry="8" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"></rect>
+<text x="272" y="829" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#c2410c" font-weight="800" text-anchor="start">空状态示例</text>
+<text x="272" y="852" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#c2410c" font-weight="400" text-anchor="start">首次进入时仍展示 5 个固定瓷片位，未配置内容显示“待配置”。</text>
+<rect x="790" y="804" width="520" height="56" rx="8" ry="8" fill="#fef2f2" stroke="#fecaca" stroke-width="1"></rect>
+<text x="814" y="829" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#b42318" font-weight="800" text-anchor="start">异常状态示例</text>
+<text x="814" y="852" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#b42318" font-weight="400" text-anchor="start">列表接口失败时展示错误态和重试；保存失败保留当前配置。</text>
+<rect x="1040" y="94" width="270" height="134" rx="8" ry="8" fill="#fff" stroke="#e5e7eb" stroke-width="1"></rect>
+<text x="1064" y="124" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#101828" font-weight="800" text-anchor="start">首页展示预览</text>
+<rect x="1064" y="146" width="92" height="64" rx="8" ry="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1"></rect>
+<text x="1110" y="184" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#c2410c" font-weight="700" text-anchor="middle">大瓷片</text>
+<rect x="1168" y="146" width="50" height="29" rx="6" ry="6" fill="#eef2ff" stroke="#818cf8" stroke-width="1"></rect>
+<text x="1193" y="166" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="11" fill="#4338ca" font-weight="700" text-anchor="middle">小1</text>
+<rect x="1230" y="146" width="50" height="29" rx="6" ry="6" fill="#eef2ff" stroke="#818cf8" stroke-width="1"></rect>
+<text x="1255" y="166" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="11" fill="#4338ca" font-weight="700" text-anchor="middle">小2</text>
+<rect x="1168" y="181" width="50" height="29" rx="6" ry="6" fill="#eef2ff" stroke="#818cf8" stroke-width="1"></rect>
+<text x="1193" y="201" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="11" fill="#4338ca" font-weight="700" text-anchor="middle">小3</text>
+<rect x="1230" y="181" width="50" height="29" rx="6" ry="6" fill="#eef2ff" stroke="#818cf8" stroke-width="1"></rect>
+<text x="1255" y="201" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="11" fill="#4338ca" font-weight="700" text-anchor="middle">小4</text>
+</svg>
