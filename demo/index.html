@@ -90,6 +90,7 @@
             <div class="red-head">
               <button class="back" data-view-target="mini-home">‹</button>
               <b>商品专题</b>
+              <span class="mini-capsule">•••　◎</span>
             </div>
             <div class="topic-cover">
               <h2>爆品热门专题</h2>
@@ -102,7 +103,7 @@
             <h2>专题列表交互</h2>
             <ul>
               <li>未登录用户可浏览列表。</li>
-              <li>分类是筛选项，默认不选中，单选后再次点击取消。</li>
+              <li>分类是单选筛选项，默认选中“全部”，点击其他分类切换列表。</li>
               <li>未配置分类时隐藏分类区。</li>
               <li>点击专题卡片进入详情，未登录先触发登录。</li>
             </ul>
@@ -114,14 +115,11 @@
             <div class="red-head detail-head">
               <button class="back" data-view-target="mini-list">‹</button>
               <b id="detailTitle">618消费券补贴</b>
-            </div>
-            <div class="detail-search">
-              <input id="miniSearch" placeholder="请输入要查询的内容" />
-              <button id="clearSearch">清空</button>
+              <span class="mini-capsule">•••　◎</span>
             </div>
             <div class="detail-cover">
               <h2 id="detailCoverTitle">618消费券补贴</h2>
-              <p>官方百亿补贴</p>
+              <p>精选好物 · 热门爆款 · 抖老板精选</p>
             </div>
             <div class="detail-toolbar">
               <div class="sort-scroll" id="miniSorts"></div>
@@ -139,29 +137,22 @@
             </ul>
             <div class="state-card">
               <b>可试操作</b>
-              <p>搜索、排序、点击商品、单商品加货架、复制 ID/口令、批量加货架。</p>
+              <p>排序、点击商品、单商品加货架、复制 ID/口令、批量加货架。</p>
             </div>
           </div>
         </section>
 
         <section class="view" id="admin-tiles">
           <div class="admin-shell">
-            <aside class="admin-menu"><b>抖老板后台</b><span>快手选品管理</span><em>运营瓷片配置</em><span>商品专题管理</span></aside>
+            <aside class="admin-menu"><b>业务管理中心</b><strong>电商选品-选品中心</strong><span>客服管理</span><span>资源位管理</span><span>金刚区管理</span><em>瓷片区管理</em></aside>
             <div class="admin-page">
               <div class="admin-title">
                 <div>
-                  <p>快手选品管理 / 运营瓷片配置</p>
-                  <h2>运营瓷片配置</h2>
-                  <span>配置首页金刚区下方、商品分类 Tab 上方的运营瓷片区。</span>
+                  <p>达人选品广场　/　抖音版　/　<b>快手版</b></p>
+                  <h2>瓷片内容列表</h2>
                 </div>
-                <button class="primary" id="saveTiles">保存配置</button>
               </div>
-              <div class="notice">所有瓷片位均为必填；保存后持续展示，直到运营替换；本期仅支持商品专题、小程序路由，不支持 H5。</div>
               <div class="admin-card">
-                <div class="card-head">
-                  <h3>瓷片位列表</h3>
-                  <span>固定 5 个瓷片位，不支持新增或删除</span>
-                </div>
                 <table class="data-table" id="tileTable"></table>
               </div>
             </div>
@@ -170,22 +161,23 @@
 
         <section class="view" id="admin-topics">
           <div class="admin-shell">
-            <aside class="admin-menu"><b>抖老板后台</b><span>运营瓷片配置</span><em>商品专题管理</em></aside>
+            <aside class="admin-menu"><b>业务管理中心</b><strong>电商选品-选品中心</strong><em>专题列表</em></aside>
             <div class="admin-page">
               <div class="admin-title">
                 <div>
-                  <p>快手选品管理 / 商品专题管理</p>
-                  <h2>商品专题管理</h2>
+                  <p>专题</p>
+                  <h2>专题列表</h2>
                 </div>
                 <div class="button-row">
                   <button class="ghost" id="openCategoryDrawer">专题分类管理</button>
                   <button class="primary" data-view-target="admin-edit">新增专题</button>
                 </div>
               </div>
-              <div class="filters">
-                <input id="topicKeyword" placeholder="专题名称/ID" />
-                <select id="topicStatus"><option value="">全部状态</option><option>草稿</option><option>已上架</option><option>已下架</option></select>
+              <div class="filters topic-filters">
+                <input id="topicKeyword" placeholder="请输入专题名称" />
+                <select id="topicStatus"><option value="">状态：请选择</option><option>草稿</option><option>已上架</option><option>已下架</option></select>
                 <button class="primary" id="searchTopicBtn">查询</button>
+                <button class="ghost" id="resetTopicBtn">重置</button>
               </div>
               <div class="admin-card">
                 <table class="data-table" id="topicTable"></table>
@@ -196,12 +188,12 @@
 
         <section class="view" id="admin-edit">
           <div class="admin-shell">
-            <aside class="admin-menu"><b>抖老板后台</b><span>商品专题管理</span><em>专题新增/编辑</em></aside>
+            <aside class="admin-menu"><b>业务管理中心</b><strong>电商选品-选品中心</strong><em>专题列表</em></aside>
             <div class="admin-page">
               <div class="admin-title">
                 <div>
-                  <p>快手选品管理 / 商品专题管理 / 新增专题</p>
-                  <h2>专题新增/编辑</h2>
+                  <p>‹　新增专题</p>
+                  <h2>基础信息</h2>
                 </div>
                 <div class="button-row">
                   <button class="ghost" data-view-target="admin-topics">取消</button>
@@ -212,11 +204,11 @@
               <div class="admin-card form-card">
                 <h3>基础信息</h3>
                 <div class="form-grid">
-                  <label>专题名称<input value="618消费券补贴" /></label>
-                  <label>专题副标题/描述<input value="官方百亿补贴" /></label>
+                  <label><i>*</i> 专题名称<input value="七夕好物专场" /></label>
+                  <label>专题副标题<input value="跟趋势爆品，抢话题流量" /></label>
                   <label>专题分类<select><option>热门专题</option><option>低价好物</option><option>未分类</option></select></label>
                   <label>排序<input value="10" /></label>
-                  <label class="upload">专题封面/头图<div>点击上传专题头图</div></label>
+                  <label class="upload"><i>*</i> 专题头图<div>＋<br>点击上传专题头图<small>1125×792px · png/jpg/gif · 最大10M</small></div></label>
                 </div>
               </div>
               <div class="admin-card">
@@ -230,15 +222,10 @@
                     <button id="autoPlanTab">自动匹配商品计划 <span>?</span></button>
                   </div>
                   <div class="plan-content" id="manualPlanContent">
-                    <div class="plan-subtitle"><i></i><b>选择活动计划</b></div>
-                    <button class="add-plan-btn" data-open="productSelectModal">＋ 添加商品计划</button>
-                    <div class="selected-plan-card">
-                      <b>618消费券补贴固定货盘</b>
-                      <span>已选择 6 个商品，来源：竞佣成功的快手选品池</span>
-                      <div class="button-row">
-                        <button class="ghost" data-open="productSelectModal">手动选择商品</button>
-                        <button class="ghost" data-open="excelModal">Excel 导入商品 ID</button>
-                      </div>
+                    <div class="plan-subtitle"><i></i><b>选择商品计划</b><span class="plan-limit-note">固定货盘仅支持配置 1w 商品上限</span><a data-open="productSelectModal" data-product-mode="selected">已选6计划 ›</a></div>
+                    <div class="button-row">
+                      <button class="add-plan-btn" data-open="productSelectModal" data-product-mode="add">＋ 添加商品计划</button>
+                      <button class="add-plan-btn" data-open="excelModal">Excel 导入商品ID</button>
                     </div>
                   </div>
                   <div class="plan-content hidden" id="autoPlanContent">
@@ -252,14 +239,14 @@
                       <div class="rule-row">
                         <select><option>商品类目</option></select>
                         <div class="multi-value">玩具乐器 × <span>+49...</span></div>
-                        <button>🗑</button>
+                        <button title="删除条件">×</button>
                       </div>
                       <div class="rule-row">
                         <select><option>佣金率</option></select>
                         <input value="1" />
                         <span>至</span>
                         <input value="10" />
-                        <button>🗑</button>
+                        <button title="删除条件">×</button>
                       </div>
                       <div class="rule-actions">
                         <button data-open="conditionModal">＋ 添加条件</button>
@@ -268,7 +255,6 @@
                     </div>
                   </div>
                 </div>
-                <table class="data-table" id="cargoTable"></table>
               </div>
             </div>
           </div>
@@ -307,31 +293,16 @@
       </div>
     </div>
 
-    <div id="mainTileResourceModal" class="modal-mask hidden">
-      <div class="modal extra-wide">
-        <div class="resource-modal-head">
-          <h3>主推资源位配置</h3>
-          <button data-close>×</button>
-        </div>
-        <div class="resource-actions">
-          <span>数据列表</span>
-          <button class="ghost" id="enableAllMainContents">全部启用</button>
-        </div>
-        <table class="data-table resource-table" id="mainTileResourceTable"></table>
-        <p class="muted">主推资源位最多支持 3 条内容，按排序顺序轮播；每行内容可单独编辑和查看点击明细。</p>
-      </div>
-    </div>
-
-    <div id="tileClickModal" class="modal-mask hidden">
-      <div class="modal wide">
-        <h3>瓷片点击明细</h3>
+    <div id="tileClickModal" class="drawer hidden">
+      <div class="drawer-panel click-drawer">
+        <div class="drawer-head"><h3>点击明细</h3><button data-close>×</button></div>
         <div class="filters compact">
-          <input placeholder="时间范围" />
-          <input placeholder="用户 ID" />
+          <input placeholder="时间范围：开始时间 至 结束时间" />
+          <input placeholder="机构ID：请输入机构ID" />
           <button class="primary">查询</button>
         </div>
         <table class="data-table" id="clickLogTable"></table>
-        <div class="modal-actions"><button class="primary" data-close>关闭</button></div>
+        <div class="pagination">共 6532 条　100 条/页　‹　<b>1</b>　2　3　4　5　…　100　›</div>
       </div>
     </div>
 
@@ -343,10 +314,16 @@
       </div>
     </div>
 
-    <div id="productSelectModal" class="modal-mask hidden">
-      <div class="modal wide">
-        <h3>手动选择商品</h3>
-        <div class="filters compact"><input placeholder="商品 ID / 商品名称" /><button class="primary">查询</button></div>
+    <div id="productSelectModal" class="drawer hidden">
+      <div class="drawer-panel product-drawer">
+        <div class="drawer-head"><h3 id="productDrawerTitle">添加商品计划</h3><button data-close>×</button></div>
+        <div class="product-filter-grid" id="productFilterGrid">
+          <input placeholder="请输入商品名称" /><select><option>商品类目：请选择</option></select><select><option>店铺名称：请选择</option></select>
+          <select><option>商品标签：请选择</option></select><input placeholder="价格：最低 至 最高" /><input placeholder="佣金：最低 至 最高" />
+          <input placeholder="服务费：最低 至 最高" /><input placeholder="昨日销量：最低 至 最高" /><input placeholder="7日销量：最低 至 最高" />
+          <button class="primary">查询</button>
+        </div>
+        <div class="selection-head"><b id="productListTitle">商品计划列表</b><a>已选商品计划：6 ›</a><button class="primary" id="selectAllProducts">一键全选</button></div>
         <table class="data-table" id="selectProductTable"></table>
         <div class="modal-actions"><button class="ghost" data-close>取消</button><button class="primary" id="addSelectedProducts">确定加入</button></div>
       </div>
@@ -369,7 +346,7 @@
     <div id="excelModal" class="modal-mask hidden">
       <div class="modal">
         <h3>Excel 导入商品 ID</h3>
-        <div class="upload-box">上传包含商品 ID 列的 Excel</div>
+        <div class="upload-box">上传包含商品 ID 列的 Excel<small>单次最多支持 1w 条记录</small></div>
         <div class="result-box">
           <b>解析结果</b>
           <p>成功 3 条，失败 2 条。重复 ID 自动去重，失败商品展示原因。</p>
